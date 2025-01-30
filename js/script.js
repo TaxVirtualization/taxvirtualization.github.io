@@ -1,16 +1,21 @@
-const form = document.querySelector('form');
+function checkRecaptcha() 
+{
+  var response = grecaptcha.getResponse();
+  if(response.length == 0) 
+  { 
+    //reCaptcha not verified
+    alert("no pass"); 
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+      const form = document.querySelector('form');
 
-    const captchaResponse = grecaptcha.getResponse();
-
-    if (!captchaResponse.length > 0){
-        throw new Error("Captcha not complete");
-    }
-
-
-    const fd = new FormData(e.target);
+      form.addEventListener('submit', (e) => {e.preventDefault();});
+  }
+  else 
+  { 
+      const form = document.querySelector('form');
+    //reCaptch verified
+    alert("pass"); 
+      const fd = new FormData(e.target);
     const params = new URLSearchParams(fd);
 
 
@@ -19,14 +24,7 @@ form.addEventListener('submit', (e) => {
         method: "POST",
         body: params,
     
-    })
+    });
 
-    .then(res => res.json())
-    .then(data => 
-          {console.log(data);
-          window.location.href = "submit.html";})
-    .catch(err => console.error(err))
-    
-    //Find out how to make submitting redirect to the submit page and still submit the data, currently the code below breaks this functionality
-    //window.location.href = "submit.html";
-});
+  }
+}
