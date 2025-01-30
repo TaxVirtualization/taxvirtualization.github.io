@@ -20,7 +20,7 @@ function onRecaptchaResponseExpiry() {
 }
 
 window.onload = function () {
-  const recaptchaForm = document.getElementById("recaptcha-form");
+  const recaptchaForm = document.getElementById("contactForm");
   recaptchaForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
