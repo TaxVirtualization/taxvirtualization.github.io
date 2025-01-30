@@ -23,8 +23,8 @@ form.addEventListener('submit', (e) => {
 
     .then(res => 
     {
-        res.json()
         window.location.href = "submit.html";
+        res.json()
     })
 
     .then(data => console.log(data))
