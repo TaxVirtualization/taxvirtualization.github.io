@@ -24,7 +24,9 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
+    
+    <!-- Google Recaptcha JavaScript API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -610,6 +612,9 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
+                                <div class="g-recaptcha" data-sitekey="6LdIZscqAAAAAK0kGzloC1aqwLrJ0sL6-uo_S9r3"></div>
+                            </div>
+                            <div>
                                 <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
                                     Message</button>
                             </div>
@@ -662,6 +667,9 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Recaptcha Script -->
+    <script src="js/script.js"></script>
 
     <!-- Contact Javascript File -->
     <!--
