@@ -26,15 +26,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Google Recaptcha JavaScript API -->
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-
-    <!-- Google Recaptcha callback function to handle the token. -->
-    <script>
-    function onSubmit(token)
-    {
-     document.getElementById("demo-form").submit();
-    }
-    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -622,7 +614,7 @@
                             <div>
                                 <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
                                     Message</button>
-                                <div class="g-recaptcha" data-sitekey="6LcOVscqAAAAAMqY9zV8g9u6s_6S_XDcUnKGEveF"></div>
+                                <div class="g-recaptcha" data-sitekey="6LdIZscqAAAAAK0kGzloC1aqwLrJ0sL6-uo_S9r3"></div>
                             </div>
                         </form>
                     </div>
