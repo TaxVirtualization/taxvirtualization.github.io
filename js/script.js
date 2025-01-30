@@ -4,11 +4,12 @@ function checkRecaptcha()
   if(response.length == 0) 
   { 
     //reCaptcha not verified
-    alert("no pass"); 
+    alert("Please fill out CAPTCHA"); 
 
       const form = document.querySelector('form');
 
       form.addEventListener('submit', (e) => {e.preventDefault();});
+      location.reload();
   }
   else 
   { 
