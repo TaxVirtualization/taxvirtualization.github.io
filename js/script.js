@@ -21,8 +21,8 @@ form.addEventListener('submit', (e) => {
     
     })
 
-    .then(res => window.location.href = "submit.html")
-    .then(data => console.log(data))
+    .then(res => res.json())
+    .then(data => window.location.href = "submit.html")
     .catch(err => console.error(err))
     
     //Find out how to make submitting redirect to the submit page and still submit the data, currently the code below breaks this functionality
