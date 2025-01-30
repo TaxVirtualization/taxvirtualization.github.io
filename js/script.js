@@ -34,5 +34,6 @@ window.onload = function () {
     // success
     toggleRecaptchaFormMessage("error", true);
     toggleRecaptchaFormMessage("success");
+    $(e).unbind('submit').submit();
   });
 };
