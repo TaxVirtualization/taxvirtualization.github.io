@@ -21,14 +21,11 @@ form.addEventListener('submit', (e) => {
     
     })
 
-    .then(res => res.json())
-
-    //test code
-    .then( res => 
+    .then(res => 
     {
-       window.location.href = "submit.html";
-    }
-
+        res.json()
+        window.location.href = "submit.html";
+    })
 
     .then(data => console.log(data))
     .catch(err => console.error(err))
