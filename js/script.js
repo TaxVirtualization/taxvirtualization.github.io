@@ -13,6 +13,7 @@ function checkRecaptcha()
   else 
   { 
       const form = document.querySelector('form');
+      form.addEventListener('submit', (e));
     //reCaptch verified
     alert("pass"); 
       const fd = new FormData(e.target);
