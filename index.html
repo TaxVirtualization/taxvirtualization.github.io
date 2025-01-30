@@ -614,7 +614,13 @@
                             <div>
                                 <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
                                     Message</button>
-                                <div class="g-recaptcha" data-sitekey="6LdIZscqAAAAAK0kGzloC1aqwLrJ0sL6-uo_S9r3"></div>
+                                <div
+                                    class="g-recaptcha" 
+                                    data-sitekey="6LdIZscqAAAAAK0kGzloC1aqwLrJ0sL6-uo_S9r3"
+                                    data-callback="onRecaptchaSuccess"
+                                    data-expired-callback="onRecaptchaResponseExpiry"
+                                    data-error-callback="onRecaptchaError">
+                                </div>
                             </div>
                         </form>
                     </div>
