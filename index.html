@@ -24,6 +24,17 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Google Recaptcha JavaScript API -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <!-- Google Recaptcha callback function to handle the token. -->
+    <script>
+    function onSubmit(token)
+    {
+     document.getElementById("demo-form").submit();
+    }
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -609,7 +620,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
+                                <button class="btn btn-outline-primary g-recaptcha" data-sitekey="6LcOVscqAAAAAMqY9zV8g9u6s_6S_XDcUnKGEveF" data-callback='onSubmit' data-action='submit' type="submit" id="sendMessageButton">Send
                                     Message</button>
                             </div>
                         </form>
