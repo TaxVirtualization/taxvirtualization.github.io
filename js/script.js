@@ -3,7 +3,7 @@ function checkRecaptcha()
   //used to check if captcha is verified on client end
   var response = grecaptcha.getResponse();
   
-  //if captcha is not filled
+  //if captcha is not filled go through this to stop bots
   if(response.length == 0) 
   { 
     //reCaptcha not verified message is displayed
@@ -18,22 +18,8 @@ function checkRecaptcha()
     //reloads page and makes person refill form
     location.reload();
   }
-  //else if captcha is filled
-  else 
-  { 
-      //const form = document.querySelector('form');
-      //form.addEventListener('submit', (e));
+  
 
-    //const fd = new FormData(e.target);
-    //const params = new URLSearchParams(fd);
-
-
-    //fetch('https://docs.google.com/forms/d/e/1FAIpQLSclKHo7ZVcOUeGEe6FulYnD4AkDtiya-ycOzEOyEvvEwxQ6aQ/formResponse', {
-
-        //method: "POST",
-       // body: params,
-    
-    //});
-
-  }
+  //otherwise the script will not run and the form is submitted
+  
 }
